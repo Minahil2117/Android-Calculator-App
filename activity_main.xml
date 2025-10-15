@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:context=".MainActivity"
+    android:background="#f0f0f5"> <!-- Added light background for contrast -->
+
+
+    <TextView
+        android:id="@+id/display_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFFFFF"
+        android:gravity="bottom|end"
+        android:text="0"
+        android:textSize="64sp"
+        android:textColor="#000000" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+
+    <!-- Buttons Grid Layout (5 rows, 4 columns) -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="5"
+        android:useDefaultMargins="true"
+        android:padding="8dp">
+
+        <!-- *************** ROW 1: C, (, ), / *************** -->
+        <Button
+            android:id="@+id/btn_c"
+            android:text="C"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:textSize="26dp"
+            android:backgroundTint="#F44336" /> <!-- Red -->
+        <Button
+            android:id="@+id/btn_open_paren"
+            android:text="("
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:textSize="26dp"
+            android:backgroundTint="#BDBDBD" /> <!-- Gray -->
+        <Button
+            android:id="@+id/btn_close_paren"
+            android:text=")"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:textSize="26dp"
+            android:backgroundTint="#BDBDBD" /> <!-- Gray -->
+        <Button
+            android:id="@+id/btn_divide"
+            android:text="/"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:textSize="26dp"
+            android:backgroundTint="#FF9800" /> <!-- Orange -->
+
+        <!-- *************** ROW 2: 7, 8, 9, * *************** -->
+        <Button
+            android:id="@+id/btn_7"
+            android:text="7"
+            android:textSize="26dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:backgroundTint="#00BCD4" /> <!-- Teal (Number) -->
+        <Button
+            android:id="@+id/btn_8"
+            android:text="8"
+            android:textSize="26dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:backgroundTint="#00BCD4" /> <!-- Teal (Number) -->
+        <Button
+            android:id="@+id/btn_9"
+            android:text="9"
+            android:textSize="26dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:backgroundTint="#00BCD4" /> <!-- Teal (Number) -->
+        <Button
+            android:id="@+id/btn_multiply"
+            android:text="*"
+            android:textSize="26dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:backgroundTint="#FF9800" /> <!-- Orange -->
+
+        <!-- *************** ROW 3: 4, 5, 6, + *************** -->
+        <Button
+            android:id="@+id/btn_4"
+            android:text="4"
+            android:textSize="26dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:backgroundTint="#00BCD4" /> <!-- Teal (Number) -->
+        <Button
+            android:id="@+id/btn_5"
+            android:text="5"
+            android:textSize="26dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:backgroundTint="#00BCD4" /> <!-- Teal (Number) -->
+        <Button
+            android:id="@+id/btn_6"
+            android:text="6"
+            android:textSize="26dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:backgroundTint="#00BCD4" /> <!-- Teal (Number) -->
+        <Button
+            android:id="@+id/btn_add"
+            android:text="+"
+            android:textSize="26dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:backgroundTint="#FF9800" /> <!-- Orange -->
+
+        <!-- *************** ROW 4: 1, 2, 3, - *************** -->
+        <Button
+            android:id="@+id/btn_1"
+            android:text="1"
+            android:textSize="26dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:backgroundTint="#00BCD4" /> <!-- Teal (Number) -->
+        <Button
+            android:id="@+id/btn_2"
+            android:text="2"
+            android:textSize="26dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:backgroundTint="#00BCD4" /> <!-- Teal (Number) -->
+        <Button
+            android:id="@+id/btn_3"
+            android:text="3"
+            android:textSize="26dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:backgroundTint="#00BCD4" /> <!-- Teal (Number) -->
+        <Button
+            android:id="@+id/btn_subtract"
+            android:text="-"
+            android:textSize="26dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:backgroundTint="#FF9800" /> <!-- Orange -->
+
+        <!-- *************** ROW 5: AC, 0, ., = *************** -->
+        <Button
+            android:id="@+id/btn_ac"
+            android:text="AC"
+            android:textSize="26dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:backgroundTint="#F44336" /> <!-- Red -->
+        <Button
+            android:id="@+id/btn_0"
+            android:text="0"
+            android:textSize="26dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:backgroundTint="#00BCD4" /> <!-- Teal (Number) -->
+        <Button
+            android:id="@+id/btn_decimal"
+            android:text="."
+            android:textSize="26dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:backgroundTint="#00BCD4" /> <!-- Teal (Number) -->
+        <Button
+            android:id="@+id/btn_equals"
+            android:text="="
+            android:textSize="26dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:backgroundTint="#FF9800" /> <!-- Orange -->
+
+    </GridLayout>
+
+</LinearLayout>
