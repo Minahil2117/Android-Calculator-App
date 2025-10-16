@@ -51,7 +51,7 @@ This project includes the following two main files:
 ## 🔗 Connect with Me
 
 - GitHub: [https://github.com/Minahil2117](https://github.com/Minahil2117)
-- LinkedIn: [https://linkedin.com/in/Minahil Fatima](https://linkedin.com/in/MianhilFatima)
+- LinkedIn: https://www.linkedin.com/in/minahil-fatima-ba1801339?
 
   ---
 
