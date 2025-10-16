@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // Special buttons
         findViewById(R.id.btn_c).setOnClickListener(this);
-        findViewById(R.id.btn_ac).setOnClickListener(this);
+        findViewById(R.id.btn_del).setOnClickListener(this);
         findViewById(R.id.btn_decimal).setOnClickListener(this);
         findViewById(R.id.btn_open_paren).setOnClickListener(this);
         findViewById(R.id.btn_close_paren).setOnClickListener(this);
@@ -57,8 +57,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (id == R.id.btn_c) {
             clear();
-        } else if (id == R.id.btn_ac) {
-            allClear();
+        } else if (id == R.id.btn_del) {
+            delete();
         } else if (id == R.id.btn_equals) {
             calculate();
         } else if (id == R.id.btn_add || id == R.id.btn_subtract ||
@@ -94,7 +94,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             } else {
                 calculate();
             }
-            operator = op;
+            // Convert display symbols to operators
+            if (op.equals("×")) {
+                operator = "*";
+            } else if (op.equals("÷")) {
+                operator = "/";
+            } else {
+                operator = op;
+            }
             isNewOperation = true;
         }
     }
@@ -165,6 +172,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         firstValue = 0;
         isNewOperation = true;
         updateDisplay("0");
+    }
+
+    private void delete() {
+        if (!currentInput.isEmpty()) {
+            currentInput = currentInput.substring(0, currentInput.length() - 1);
+            if (currentInput.isEmpty()) {
+                updateDisplay("0");
+            } else {
+                updateDisplay(currentInput);
+            }
+        }
     }
 
     private void updateDisplay(String value) {
